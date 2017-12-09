@@ -3,18 +3,28 @@
 
 header {
 	color: #216071;
-	background: white;
+	background-image: url("../img/BACKGROUNDRAIL.png");;
+	background-repeat: repeat;
+  	background-size: cover;
 	padding-bottom: 1%;
 	padding-top: 1%;
 }
-
+header a {
+	color: white;
+}
+#lol {
+	color: #dfcb43;
+}
+#lol2 {
+	color:#bbd631;
+}
 
 body {
 	background: #49b749;
 }
 
 #appdolar {
-		background: #1993d2;
+	background: rgba(25, 147, 210, 0.8);
 	color: white;
 	padding: 2%;
 
@@ -89,9 +99,12 @@ footer img {
 
 header {
 	color: #216071;
-	background: white;
 	padding-bottom: 10%;
 	padding-top: 10%;
+}
+
+header h1 {
+	font-size: 180%;
 }
 
 }

@@ -1,7 +1,7 @@
 var btn = document.getElementById('btn');
 var preciodolar;
 var xrbpriceUSD;
-var template = '<p>precio: :precio:</p>' ;
+var template = '<p>precio: :precio: <br> :preciousd:</p>' ;
 
 
 var coinmarketRequest = new XMLHttpRequest ();
@@ -37,13 +37,17 @@ function calculadora (dolarprecio, xrbprecio ){
         .find('input[type="number"]')
         .val();
          var  y = busqueda * xrb;
+         var x = busqueda * xrbpriceUSD;
          var z = accounting.formatMoney(y, "Bsf ", 2, ".", ",");
+         var a = accounting.formatMoney(x, "$ ", 2, ".");
 	  		var article = template
        
           .replace(':precio:', z)
+          .replace(':preciousd:', x)
           
           
         document.getElementById("lol").innerHTML = busqueda+' XRB '+ '  = '+ z ; 
+        document.getElementById("lol2").innerHTML = busqueda+' XRB '+ '  = ' + a; 
         
 	
 
