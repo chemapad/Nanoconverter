@@ -1,0 +1,94 @@
+*{font-family: 'Titillium Web', sans-serif;
+}
+
+header {
+	color: #216071;
+	background: white;
+	padding-bottom: 1%;
+	padding-top: 1%;
+}
+
+
+body {
+	background: #49b749;
+}
+
+#appdolar {
+		background: #1993d2;
+	color: white;
+	padding: 2%;
+
+}
+
+#appdolar p {
+	font-size: 18px;
+	text-align: center;
+}
+
+#lol {
+	text-align: center;
+	font-size: 25px;
+}
+li {
+	float: right;
+	padding-right: 2%;
+	list-style: none;
+}
+#boton {
+	background-color: #40b299;
+	color: white;
+}
+footer {
+	background: #49b749;
+	padding-top: 10%;
+	
+}
+
+footer img {
+	width: 5%;
+}
+
+footer p {
+	
+}
+.form-control {
+	width: 35%;
+}
+
+#lol {
+	padding-top: 2%;
+}
+
+@media (max-width: 600px) {
+  .form-control{
+    width: 100%;
+  }
+
+.footer {
+	margin: 0;
+	padding-left: 5%;
+}
+
+.wallet {
+	font-size: 80%;
+	text-align: center;
+	margin-left: 0;
+}
+
+#appdolar{
+	padding-bottom: 15%;
+	padding-top: 15%;
+}
+
+footer img {
+	width: 17%;
+}
+
+header {
+	color: #216071;
+	background: white;
+	padding-bottom: 10%;
+	padding-top: 10%;
+}
+
+}
