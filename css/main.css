@@ -40,17 +40,20 @@ li {
 }
 footer {
 	background: #49b749;
-	padding-top: 10%;
+	padding-top: 5%;
+	text-align: center;
 	
+}
+.wallet {
+	text-align: center;
+	font-size: 120%;
+	padding-bottom: 2%;
 }
 
 footer img {
 	width: 5%;
 }
 
-footer p {
-	
-}
 .form-control {
 	width: 35%;
 }
