@@ -23,12 +23,30 @@
 		<div class="row" id="appdolar">
 			<div class="col-md-12" id="dolartoday" >
 				<p id="precio"><i class="fa fa-dollar" id="dolar"></i> <br> <i class="fa fa-calendar" id="calendario"></i> </p>
-				<form class="form-horizontal">
-					<div class="form-group">
-			        	<input class="form-control center-block" type="number" placeholder='Enter amount of XRB (Raiblocks)' min="1">
-			        
+				<form class="form-horizontal"  method="POST">
+					<div class="input-group">
+			        	<input class="form-control center-block" type="number" placeholder='Enter amount of XRB (Raiblocks)' min="1"> 
+			        <div class="input-group-btn">
+		                <select class="btn btn-default btn-select select-picker" name="divisas"  id="opciones" >
+		  					<optgroup label="Crypto" >
+							    <option value="1" selected='1'>Bitcoin</option>
+							    <option value="2">Ethereum</option>
+							    <option value="3">BitcoinCash</option>
+							    <option value="4">DogeCoin</option>
+							</optgroup>
+							<optgroup label="Divisas">
+							    <option value="5">Dollar</option>
+							    <option value="6">Euro</option>
+							    <option value="7" data-image="img/ve.png">VEF</option>
+						    </optgroup>
+		              </select>
+            
+        			</div>
+
 			        </div>
-			        <button  class="form-control center-block" id="boton" type="submit"> Calculate</button>
+			        </div>
+			       <br><br>
+			        <button  class="form-control center-block" id="boton" type="submit" > Calculate</button>
 			    </form>
 			    <p  id="lol"> </p>
 				<p  id="lol2"> </p>
@@ -50,10 +68,10 @@
      	<div class="wallet text-left hidden-sm" >xrb_316ey56hotbhhhchxqcwcpoutpagbn9hxmtq4rawe4eid8m8afttnu6z5fcu</div>
 </footer>
 
-		
+
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script src="js/accounting.min.js"> </script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.js"></script>
 <script src="js/main.js"></script>
 
 

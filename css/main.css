@@ -3,6 +3,7 @@
 
 header {
 	color: #216071;
+	background: gray;
 	background-image: url("../img/BACKGROUNDRAIL.png");;
 	background-repeat: repeat;
   	background-size: cover;
@@ -71,6 +72,7 @@ footer img {
 #lol {
 	padding-top: 2%;
 }
+
 
 @media (max-width: 600px) {
   .form-control{
