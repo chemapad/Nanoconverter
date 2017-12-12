@@ -171,7 +171,9 @@ footer img {
 footer img {
 	width: 17%;
 }
-
+#boton {
+	width: 35%;
+}
 header {
 	color: white;
 	padding-bottom: 10%;
