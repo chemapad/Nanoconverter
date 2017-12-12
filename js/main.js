@@ -185,8 +185,8 @@ function calculadora (dolarprecio, xrbprecio ){
 if (xrbpriceUSD==undefined) {
 	var intervalo= setInterval (calculadora, 500);
 }else {
-	document.getElementById("dolar").innerHTML = '$: '+preciodolar+ 'VEF' ;
-     document.getElementById("calendario").innerHTML = 'Xrb: ' +xrbpriceUSD+ '$' ;
+	document.getElementById("dolar").innerHTML = 'In block lattice we trust' ;
+     document.getElementById("calendario").innerHTML = 'Xrb: ' +xrbpriceUSD+ '$ '  +'/ '+ xrbpricebitcoin+'sat' ;
 } ;
 
 };

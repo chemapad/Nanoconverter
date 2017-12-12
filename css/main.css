@@ -34,14 +34,11 @@ header a {
 
 #logorai {
 	margin-left: 43.5%;
+	width: 12%;
 }
 
-#lol {
-	color: #dfcb43;
-}
-#lol2 {
-	color:#bbd631;
-}
+
+
 
 body {
 	background: #49b749;
@@ -51,14 +48,32 @@ body {
 	background: white;
 	color: #2C3E50;
 	padding: 2%;
-
-}
-
-#appdolar p {
 	font-size: 18px;
 	text-align: center;
-}
 
+}
+.info {
+	font-size: 21px;
+}
+.btn-social{
+	font-size: 30px;
+}
+.btn-outline-footer{
+  color: white;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  margin: 3px;
+}
+.nav li a:hover {
+	color: #18BC9C;
+	background: transparent;
+}
+.btn-outline-footer:hover,
+.btn-outline-footer:focus,
+.btn-outline-footer:active,
+.btn-outline-footer.active {
+  color: #18BC9C;
+}
 .btn-outline {
   color: #18BC9C;
   font-size: 18.5px;
@@ -77,6 +92,8 @@ body {
 }
 
 #lol {
+	color: #18BC9C;
+	font-weight: 700;
 	text-align: center;
 	font-size: 25px;
 }
@@ -123,6 +140,12 @@ footer img {
 
 
 @media (max-width: 600px) {
+
+#logorai {
+	margin-left: 39%;
+	width: 20%;
+}
+
 .input-group {
 	width: 100%;
 	margin-left: 0;
@@ -140,9 +163,10 @@ footer img {
 }
 
 #appdolar{
-	padding-bottom: 15%;
-	padding-top: 15%;
+	padding-bottom: 5%;
+	padding-top: 5%;
 }
+
 
 footer img {
 	width: 17%;
