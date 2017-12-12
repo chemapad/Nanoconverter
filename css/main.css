@@ -1,18 +1,41 @@
 *{font-family: 'Titillium Web', sans-serif;
 }
 
+.navbar {
+	background-color:#2C3E50; 
+	color: white;
+	margin: 0;
+
+}
+.navbar li {
+	padding: 5px;
+}
+
+.icon-bar{
+	   background-color: white;
+}
+.navbar a {
+	color: white;
+}
 header {
-	color: #216071;
-	background: gray;
-	background-image: url("../img/BACKGROUNDRAIL.png");;
-	background-repeat: repeat;
-  	background-size: cover;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
+	background-color: #0070ff;
 	padding-bottom: 1%;
 	padding-top: 1%;
+}
+
+header h1 {
+	font-weight: 700;
 }
 header a {
 	color: white;
 }
+
+#logorai {
+	margin-left: 43.5%;
+}
+
 #lol {
 	color: #dfcb43;
 }
@@ -25,8 +48,8 @@ body {
 }
 
 #appdolar {
-	background: rgba(25, 147, 210, 0.8);
-	color: white;
+	background: white;
+	color: #2C3E50;
 	padding: 2%;
 
 }
@@ -34,6 +57,23 @@ body {
 #appdolar p {
 	font-size: 18px;
 	text-align: center;
+}
+
+.btn-outline {
+  color: #18BC9C;
+  font-size: 18.5px;
+  border: solid 1px #18BC9C;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+  color: #2C3E50;
+  background: white;
+  border: solid 2px #2C3E50;
 }
 
 #lol {
@@ -46,11 +86,12 @@ li {
 	list-style: none;
 }
 #boton {
-	background-color: #40b299;
-	color: white;
+	
+	width: 20%;
 }
 footer {
-	background: #49b749;
+	background: #2C3E50;
+	color: white;
 	padding-top: 5%;
 	text-align: center;
 	
@@ -64,9 +105,16 @@ footer {
 footer img {
 	width: 5%;
 }
-
-.form-control {
-	width: 35%;
+.input-group {
+	width: 50%;
+	margin-left: 25%;
+	padding-bottom: 2%;
+}
+.btn {
+	padding: 1px;
+}
+#btn-default {
+	background-color: black;
 }
 
 #lol {
@@ -75,10 +123,11 @@ footer img {
 
 
 @media (max-width: 600px) {
-  .form-control{
-    width: 100%;
-  }
-
+.input-group {
+	width: 100%;
+	margin-left: 0;
+	padding-bottom: 2%;
+}
 .footer {
 	margin: 0;
 	padding-left: 5%;
@@ -100,7 +149,7 @@ footer img {
 }
 
 header {
-	color: #216071;
+	color: white;
 	padding-bottom: 10%;
 	padding-top: 10%;
 }
