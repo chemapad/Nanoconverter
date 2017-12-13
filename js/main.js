@@ -82,45 +82,64 @@ dolartodayRequest.send();
 function calculadora (dolarprecio, xrbprecio ){
 	var xrb= Number(preciodolar) * xrbpriceUSD;	
 	var $tvShowsContainer = $('#appdolar').find('#dolartoday');
-	$('#dolartoday')
+	/*$('#dolartoday')
     .find('form')
     .submit(function (ev) {
-      ev.preventDefault();
-      var busqueda = $(this)
+      ev.preventDefault();*/
+      var busqueda = $('.input-group')
         .find('input[type="number"]')
         .val();
-        
+        function execute (){
+
 
         // Xrb-Bitcoin
 
-        
-          var e = document.getElementById("opciones");
-
-          
-            
-        if (opcion==1) {
+         /*if (opcion==1) {
           var z= busqueda*xrbpricebitcoin;
+          document.getElementById("lol").innerHTML = busqueda+' XRB '+ '  = '+ z + ' BTC'; 
+        }*/
+        var e = document.getElementById("opciones");
+        var y = e.options[e.selectedIndex].value;
+
+        if (y==1) {
+            $(document).ready(function(){
+              $("form").submit(function(){
+                   var z= busqueda*xrbpricebitcoin;
            
             document.getElementById("lol").innerHTML = busqueda+' XRB '+ '  = '+ z + ' BTC'; 
+             });
+          });
         }
 
-        e.addEventListener('change',
-            function(){
-              var y = e.options[e.selectedIndex].value;
 
+        e.addEventListener('change',
+            function(){    
+            var y = e.options[e.selectedIndex].value;
           //XRB-BTC
-          if (opcion==1) {
-          var z= busqueda*xrbpricebitcoin;
+          if (y==1) {
+            $(document).ready(function(){
+              $("form").submit(function(){
+                   var z= busqueda*xrbpricebitcoin;
            
             document.getElementById("lol").innerHTML = busqueda+' XRB '+ '  = '+ z + ' BTC'; 
+             });
+          });
         }
 
         //Xrb-Eth
         if (y==2) {
-          var xrbpriceeth= xrbpricebitcoin/ethpricebitcoin;
-          var z = busqueda*xrbpriceeth;
-          document.getElementById("lol").innerHTML = busqueda+' XRB '+ '  = '+ z +'ETH' ;
+          $(document).ready(function(){
+              $('form').submit(function(){
+                var xrbpriceeth= xrbpricebitcoin/ethpricebitcoin;
+                var z = busqueda*xrbpriceeth;
+                document.getElementById("lol").innerHTML = busqueda+' XRB '+ '  = '+ z +'ETH' ;
+             });
+          });
+         
         }
+          
+         
+        
         //XRB-BCH
         if (y==3) {
 
@@ -162,17 +181,26 @@ function calculadora (dolarprecio, xrbprecio ){
               });
         
 
-
+       /* var article = template
+          .replace(':precio:', z)*/
          
-
-         
-         
-         
-         var a = accounting.formatMoney(x, "$ ", 2, ".");
-	  		var article = template
-       
+       /* if (opcion==1) {
+          var z= busqueda*xrbpricebitcoin;
+          document.getElementById("lol").innerHTML = busqueda+' XRB '+ '  = '+ z + ' BTC';
+          var article = template
           .replace(':precio:', z)
-          .replace(':preciousd:', x)
+        }
+         if (opcion==2) {
+          var xrbpriceeth= xrbpricebitcoin/ethpricebitcoin;
+          var z = busqueda*xrbpriceeth;
+          document.getElementById("lol").innerHTML = busqueda+' XRB '+ '  = '+ z +'ETH' ;
+          var article = template
+          .replace(':precio:', z)
+        }*/
+         
+         
+	  		
+       
           
          
        
@@ -180,13 +208,13 @@ function calculadora (dolarprecio, xrbprecio ){
         
 	
 
-});
+}
 
 if (xrbpriceUSD==undefined) {
 	var intervalo= setInterval (calculadora, 500);
 }else {
-	document.getElementById("dolar").innerHTML = 'In block lattice we trust' ;
-     document.getElementById("calendario").innerHTML = 'Xrb: ' +xrbpriceUSD+ '$ '  +'/ '+ xrbpricebitcoin+' BTC' ;
+	document.getElementById("dolar").innerHTML = 'Coinmarketcap Raiblocks:' ;
+     document.getElementById("calendario").innerHTML = xrbpriceUSD+ '$ '  +'/ '+ xrbpricebitcoin+' BTC' ;
 } ;
 
 };

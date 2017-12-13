@@ -11,16 +11,18 @@
 	padding: 5px;
 }
 
+option {
+	font-family: 'FontAwesome', 'Monserrat', helvetica;
+}
 .icon-bar{
 	   background-color: white;
 }
 .navbar a {
 	color: white;
 }
-header {
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+header {	
 	color: white;
-	background-color: #0070ff;
+	background-color: #18BC9C;
 	padding-bottom: 1%;
 	padding-top: 1%;
 }
@@ -128,7 +130,7 @@ footer img {
 	padding-bottom: 2%;
 }
 .btn {
-	padding: 1px;
+	padding: 5.5px;
 }
 #btn-default {
 	background-color: black;

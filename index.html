@@ -48,21 +48,23 @@
 		<div class="row" id="appdolar">
 			<div class="col-md-12" id="dolartoday" >
 				<p id="precio"><i id="dolar"></i> <br> <i  id="calendario"></i> </p>
-				<form class="form-horizontal"  method="POST">
+				<form class="form-horizontal" onsubmit="return false;">
 					<div class="input-group">
-			        	<input class="form-control center-block" type="number" placeholder='Enter amount of XRB (Raiblocks)' min="1"> 
+			        	
+			        	<input class="form-control center-block" onchange type="number" placeholder='Enter amount of XRB (Raiblocks)' id="amount" min="1"> 
+
 			        <div class="input-group-btn">
-		                <select class="btn btn-outline btn-select select-picker" name="divisas"  id="opciones" >
+		                <select class="btn btn-outline btn-select select-picker seleccion" style="font-family: 'FontAwesome', 'Monserrat', helvetica;" name="divisas"  id="opciones" >
 		  					<optgroup label="Crypto" >
-							    <option value="1" selected='1'>Bitcoin</option>
+							    <option value="1" selected='1'>Bitcoin &#xf15a;</option>
 							    <option value="2">Ethereum</option>
 							    <option value="3">BitcoinCash</option>
 							    <option value="4">DogeCoin</option>
 							</optgroup>
 							<optgroup label="FIAT">
-							    <option value="5">Dollar</option>
-							    <option value="6">Euro</option>
-							    <option value="7" data-image="img/ve.png">VEF</option>
+							    <option value="5">Dollar &#xf155;</option>
+							    <option value="6">Euro &#xf153;</option>
+							    <option value="7">VEF</option>
 						    </optgroup>
 		              </select>
             
@@ -71,7 +73,7 @@
 			        </div>
 			        </div>
 			       <br><br>
-			        <button  class="form-control center-block btn btn-outline" id="boton" type="submit" > Calculate</button>
+			        <button  class="form-control center-block btn btn-outline" id="boton" onclick="execute()" > Calculate</button>
 			    </form>
 			    <p  id="lol"> </p>
 				
