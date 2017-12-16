@@ -89,7 +89,12 @@ function calculadora (dolarprecio, xrbprecio ){
       var busqueda = $('.input-group')
         .find('input[type="number"]')
         .val();
-        function execute (){
+        
+        var h=document.getElementById("boton");
+        h.addEventListener('click', function () {
+
+
+       
 
 
         // Xrb-Bitcoin
@@ -181,7 +186,7 @@ function calculadora (dolarprecio, xrbprecio ){
               });
         
 
-       /* var article = template
+      /* var article = template
           .replace(':precio:', z)*/
          
        /* if (opcion==1) {
@@ -208,7 +213,8 @@ function calculadora (dolarprecio, xrbprecio ){
         
 	
 
-}
+});
+
 
 if (xrbpriceUSD==undefined) {
 	var intervalo= setInterval (calculadora, 500);
