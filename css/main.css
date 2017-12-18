@@ -11,7 +11,9 @@
 	padding: 5px;
 }
 
-
+option {
+	font-family: 'icons ', 'Monserrat', helvetica;
+}
 
 .icon-bar{
 	   background-color: white;
