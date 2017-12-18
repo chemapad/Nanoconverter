@@ -5,7 +5,8 @@ var ethpricebitcoin;
 var bccpricebitcoin;
 var dogepricebitcoin;
 var eurpricebitcoin;
-
+var roupricebitcoin;
+var ruppricebitcoin;
 
 
 var coinmarketRequestxrb = new XMLHttpRequest();
@@ -30,6 +31,27 @@ coinmarketRequesteur.onload = function () {
 
 coinmarketRequesteur.send();
 
+
+
+var coinmarketRequestrou = new XMLHttpRequest();
+coinmarketRequestrou.open('GET', 'https://api.coindesk.com/v1/bpi/currentprice/RUB.json');
+coinmarketRequestrou.onload = function () {
+    var ourdata = JSON.parse(coinmarketRequestrou.responseText);
+    roupricebitcoin = parseFloat(ourdata['bpi']['RUB'].rate_float);
+
+};
+
+coinmarketRequestrou.send();
+
+var coinmarketRequestrup = new XMLHttpRequest();
+coinmarketRequestrup.open('GET', 'https://api.coindesk.com/v1/bpi/currentprice/IDR.json');
+coinmarketRequestrup.onload = function () {
+    var ourdata = JSON.parse(coinmarketRequestrup.responseText);
+    ruppricebitcoin = parseFloat(ourdata['bpi']['IDR'].rate_float);
+
+};
+
+coinmarketRequestrup.send();
 
 var coinmarketRequesteth = new XMLHttpRequest();
 coinmarketRequesteth.open('GET', 'https://api.coinmarketcap.com/v1/ticker/Ethereum/');
@@ -113,6 +135,14 @@ function calculadora() {
             //XRB-VEF
             html += (accounting.formatMoney(amount * xrb, "Bsf ", 2, ".", ","))
             break;
+        case 8:
+            //XRB-ROUBLE
+            html += (amount * (xrbpricebitcoin * roupricebitcoin)) + '‎₽'
+            break; 
+        case 9:
+            //XRB-ROUBLE
+            html += (amount * (xrbpricebitcoin * ruppricebitcoin)) + '‎Rp'
+            break;       
     }
     document.getElementById("lol").innerHTML = html;
 
