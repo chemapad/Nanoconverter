@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icons';
-  src: url('../font/icons.eot?68304393');
-  src: url('../font/icons.eot?68304393#iefix') format('embedded-opentype'),
-       url('../font/icons.woff2?68304393') format('woff2'),
-       url('../font/icons.woff?68304393') format('woff'),
-       url('../font/icons.ttf?68304393') format('truetype'),
-       url('../font/icons.svg?68304393#icons') format('svg');
+  src: url('../font/icons.eot?57466895');
+  src: url('../font/icons.eot?57466895#iefix') format('embedded-opentype'),
+       url('../font/icons.woff2?57466895') format('woff2'),
+       url('../font/icons.woff?57466895') format('woff'),
+       url('../font/icons.ttf?57466895') format('truetype'),
+       url('../font/icons.svg?57466895#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'icons';
-    src: url('../font/icons.svg?68304393#icons') format('svg');
+    src: url('../font/icons.svg?57466895#icons') format('svg');
   }
 }
 */
@@ -59,8 +59,11 @@
 .icon-bitcoincash:before { content: '\e801'; } /* '' */
 .icon-ethereum:before { content: '\e802'; } /* '' */
 .icon-bold:before { content: '\e803'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-euro:before { content: '\f153'; } /* '' */
 .icon-dollar:before { content: '\f155'; } /* '' */
 .icon-rupee:before { content: '\f156'; } /* '' */
 .icon-rouble:before { content: '\f158'; } /* '' */
 .icon-bitcoin:before { content: '\f15a'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */

@@ -1,0 +1,13 @@
+
+.icon-doge:before { content: '\e800'; } /* '' */
+.icon-bitcoincash:before { content: '\e801'; } /* '' */
+.icon-ethereum:before { content: '\e802'; } /* '' */
+.icon-bold:before { content: '\e803'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-euro:before { content: '\f153'; } /* '' */
+.icon-dollar:before { content: '\f155'; } /* '' */
+.icon-rupee:before { content: '\f156'; } /* '' */
+.icon-rouble:before { content: '\f158'; } /* '' */
+.icon-bitcoin:before { content: '\f15a'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
