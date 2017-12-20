@@ -149,7 +149,7 @@ function calculadora() {
     if (xrbpriceUSD == undefined) {
         setInterval(calculadora, 500);
     } else {
-        document.getElementById("dolar").innerHTML = 'Coinmarketcap Raiblocks:';
+        document.getElementById("dolar").innerHTML = 'Coinmarketcap RaiBlocks:';
         document.getElementById("calendario").innerHTML = xrbpriceUSD + '$ ' + '/ ' + xrbpricebitcoin + ' BTC';
     }
 }

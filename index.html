@@ -30,9 +30,21 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav pull-right ">
 						<li>
-							<a href="Es/index.html" value="ES">
-								<span>Español</span>
-								<img src="img/ve.png" alt="">
+							<a id="translate"  value="EN">
+								<span class="trn">English</span>
+								<img src="img/us.png" alt="">
+							</a>
+						</li>
+						<li>
+							<a id="traductor" value="ES">
+								<span class="trn">Spanish</span>
+								<img src="img/es.png" alt="">
+							</a>
+						</li>
+						<li>
+							<a id="pt"  value="EN">
+								<span class="trn">Portuguese</span>
+								<img src="img/pt.png" alt="">
 							</a>
 						</li>
 		      </ul>
@@ -42,16 +54,17 @@
 		<!-- End Nabvar -->
 		<header>
 			<img src="img/raiblockslogo.png" class="center-block" id='logorai' alt="RAIBLOCKSLOGO">
-			<h1 class="text-center">RAIBLOCKS CONVERTER </h1>
-			<h4 class="text-center">Do one thing and do it well</h4>
+			<h1 class="text-center trn">RAIBLOCKS CONVERTER</h1>
+			<h4 class="text-center trn">Do one thing and do it well</h4>
 		</header>
 		<section class="container-fluid center-block">
 			<div class="row" id="appdolar">
 				<div class="col-md-12" id="dolartoday" >
 					<p id="precio"><i id="dolar"></i> <br> <i  id="calendario"></i> </p>
 					<form class="form-horizontal" onsubmit="return false;">
+					<span class="trn">Enter amount of XRB (RaiBlocks)</span>
 						<div class="input-group">
-	        		<input class="form-control center-block" onchange type="number" placeholder='Enter amount of XRB (RaiBlocks)' id="amount" min="1">
+	        		<input class="form-control center-block trn" onchange type="number"  id="amount" min="1">
 			        <div class="input-group-btn">
 	            	<select class="btn btn-outline btn-select select-picker seleccion" style="font-family: 'icons','Monserrat', helvetica;" name="divisas"  id="opciones" >
 			  					<optgroup label="Crypto" >
@@ -61,18 +74,18 @@
 								    <option  class='iconsoption' value="4">&#xe800; DogeCoin</option>
 									</optgroup>
 									<optgroup label="FIAT">
-								    <option  class='iconsoption' value="5">&#xf155; Dollar</option>
-								    <option class='iconsoption'  value="6">&#xf153; Euro</option>
+								    <option  class='iconsoption trn' value="5">&#xf155; USD</option>
+								    <option class='iconsoption'  value="6">&#xf153; EUR</option>
 								    <option  class='iconsoption' value="7">&#xe803; VEF</option>
-								    <option  class='iconsoption' value="8">&#xf158; Roublo</option>
-								    <option  class='iconsoption' value="9">&#xf156; Rupiah</option>
+								    <option  class='iconsoption' value="8">&#xf158; RUB</option>
+								    <option  class='iconsoption' value="9">&#xf156; IDR</option>
 							    </optgroup>
 	              </select>
 	      			</div>
 		        </div>
 						<br>
 						<br>
-						<button class="form-control center-block btn btn-outline" id="boton" onclick="calculadora()">Calculate</button>
+						<button class="form-control center-block btn btn-outline" id="boton" onclick="calculadora()"><span class="trn">Calculate</span></button>
 					</form>
 			 		<p id="lol"></p>
 				</div>
@@ -80,13 +93,13 @@
 		</section>
 		<footer>
 	   	<div class="info text-center">
-				<span>Developer </span>
+				<span class="trn">Developer</span>
 				<br>
 				<a class='btn-outline-footer btn-social' href="https://www.instagram.com/chemaofficial/" target="_blank"><i class="icon-instagram" aria-hidden="true"></i></a>
 				<a class='btn-outline-footer btn-social' href="https://twitter.com/Chemaofficial" target="_blank"><i class="icon-twitter" aria-hidden="true"></i></a>
 				<a class='btn-outline-footer btn-social' href="https://github.com/chemapad" target="_blank"><i class="icon-github-circled" aria-hidden="true"></i></a>
 				<br>
-	     	<span>Kind to receive donations to this address:</span>
+	     	<span class="trn">Kind to receive donations to this address:</span>
 				<br>
 			</div>
 	   	<div class="wallet text-left hidden-sm">
@@ -97,6 +110,68 @@
 		<script src="js/accounting.min.js"> </script>
 		<script src="js/bootstrap.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/translate.js"></script>
+		<script>
+			var dict = {
+						  "Spanish": {
+						    es: "Español",
+						    en: "Spanish",
+						    pt: "Espanhol"
+						  },
+						  "English":{
+						  	es:"Inglés",
+						  	en:"English",
+						  	pt:"Inglês"
+						  },
+						  "Portuguese":{
+						  	es:"Portugués",
+						  	en:"Portuguese",
+						  	pt:"Português"
+						  },
+						  "RAIBLOCKS CONVERTER":{
+						  	es:"CONVERSOR DE RAIBLOCKS",
+						  	en:"RAIBLOCKS CONVERTER",
+						  	pt:"CONVERSOR DE RAIBLOCKS"
+						  },
+						  "Do one thing and do it well":{
+						  	es:"Haz una cosa y hazla bien",
+						  	en:"Do one thing and do it well",
+						  	pt:"Faça uma coisa e faça bem feito"
+						  },
+						  "Calculate":{
+						  	es:"Calcular",
+						  	en:"Calculate",
+						  	pt:"Calcular"
+						  },
+						  "Developer":{
+						  	es:"Desarrollador",
+						  	en:"Developer",
+						  	pt:"Desenvolvedor"
+						  },						
+						  "Enter amount of XRB (RaiBlocks)":{
+						  	es:"Ingrese cantidad de XRB (RaiBlocks)",
+						  	en:"Enter amount of XRB (RaiBlocks)",
+						  	pt:"Insira a quantidade de XRB (RaiBlocks)"
+						  },
+						  "Kind to receive donations to this address:": {
+						    es: "Agradeceria cualquier donación a esta dirección:",
+						    en: "Kind to receive donations to this address:",
+						    pt:"Recebo doações nesse endereço:"
+						  },
+						}
+			var translator = $('body').translate({lang: "en", t: dict});
+			document.getElementById("traductor").addEventListener("click", function(){
+					translator.lang("es");
+			});
+			document.getElementById("translate").addEventListener("click", function(){
+					translator.lang("en");
+			});
+			document.getElementById("pt").addEventListener("click", function(){
+					translator.lang("pt");
+			});
+
+
+		</script>
 		
 	</body>
 </html>
