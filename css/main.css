@@ -16,6 +16,15 @@ header, body {font-family: 'Titillium Web', sans-serif;
 	padding: 5px;
 }
 
+.dropdown{
+	padding: 1px;
+}
+
+
+
+li a {
+	cursor: pointer;
+}
 
 
 .icon-bar{
@@ -136,6 +145,12 @@ footer img {
 .btn {
 	padding: 5.5px;
 }
+
+.btnl{
+	margin-top: 7px;
+	padding: 2px;
+}
+
 #btn-default {
 	background-color: black;
 }
