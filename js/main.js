@@ -93,10 +93,13 @@ dolartodayRequest.onload = function () {
 }
 
 dolartodayRequest.send();
+
 var selected = 1; //bitcoin by default
 $('#opciones').on('change', function () {
     selected = Number(this.value);
 });
+
+$('#amount').on('keyup', calculadora());
 
 
 function calculadora() {
@@ -144,14 +147,17 @@ function calculadora() {
             html += (amount * (xrbpricebitcoin * ruppricebitcoin)) + '‎Rp'
             break;       
     }
+    
     document.getElementById("lol").innerHTML = html;
-
     if (xrbpriceUSD == undefined) {
-        setInterval(calculadora, 500);
-    } else {
-        document.getElementById("dolar").innerHTML = 'Coinmarketcap RaiBlocks:';
-        document.getElementById("calendario").innerHTML = xrbpriceUSD + '$ ' + '/ ' + xrbpricebitcoin + ' BTC';
-    }
+            setInterval(calculadora, 500);
+        } else {
+            document.getElementById("dolar").innerHTML = 'Coinmarketcap RaiBlocks:';
+            document.getElementById("calendario").innerHTML = xrbpriceUSD + '$ ' + '/ ' + xrbpricebitcoin + ' BTC';
+        }
+   
 }
+
+
 
 
