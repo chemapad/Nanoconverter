@@ -10,7 +10,7 @@ var ruppricebitcoin;
 
 
 var coinmarketRequestxrb = new XMLHttpRequest();
-coinmarketRequestxrb.open('GET', 'https://api.coinmarketcap.com/v1/ticker/Raiblocks/');
+coinmarketRequestxrb.open('GET', 'https://api.coinmarketcap.com/v1/ticker/nano/');
 coinmarketRequestxrb.onload = function () {
     var ourdata = JSON.parse(coinmarketRequestxrb.responseText);
     xrbpricebitcoin = parseFloat(ourdata[0].price_btc);
@@ -107,7 +107,7 @@ function calculadora() {
     var amount = $('.input-group')
         .find('input[type="number"]')
         .val();
-    var html = amount + ' XRB ' + '  = ';
+    var html = amount + ' NANO ' + '  = ';
     switch (selected) {
         case 1:
             //XRB-BTC
