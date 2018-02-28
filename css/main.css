@@ -182,6 +182,7 @@ footer img {
 	font-size: 80%;
 	text-align: center;
 	margin-left: 0;
+	word-break: break-all;
 }
 
 #appdolar{
@@ -197,7 +198,7 @@ footer img {
 	width: 35%;
 }
 header {
-	color: white;
+	color: #3C7BDB;
 	padding-bottom: 10%;
 	padding-top: 10%;
 }
